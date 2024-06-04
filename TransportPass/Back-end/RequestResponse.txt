@@ -1,0 +1,99 @@
+Request-Response
+
+# Create client
+
+Request
+type:CreateClient
+nume:String
+prenume:String
+email:String
+parola:String
+CNP:String
+statut:String
+
+Response
+type:OkResponse
+____
+type:ErrorResponse
+message:
+
+# Login
+
+Request
+type:Login
+email:String
+parola:String
+
+Response
+type:ClientResponse
+____
+type:ControlorResponse
+____
+type:ErrorResponse
+message:
+
+# Buy Ticket
+
+Request
+type:BuyTicket
+dataIncepere:String - Format : yyyy-MM-dd HH:mm:ss
+dataExpirare:String - Format : yyyy-MM-dd HH:mm:ss
+pret:Double
+tip:String
+
+Response
+type:OkResponse
+____
+type:ErrorResponse
+message:
+
+# Get Tickets
+Request
+type:GetTickets
+
+Response:
+size:integer
+id1:Long
+dataIncepere1:String - Format : yyyy-MM-dd HH:mm:ss
+dataExpirare1:String - Format : yyyy-MM-dd HH:mm:ss
+pret1:Double
+tip1:String
+qr1:byte[]
+
+# Buy Pass
+Request
+type:BuyPass
+dataIncepere:String - Format : yyyy-MM-dd HH:mm:ss
+dataExpirare:String - Format : yyyy-MM-dd HH:mm:ss
+pret:Double
+tip:String
+
+Response
+type:OkResponse
+____
+type:ErrorResponse
+message:
+
+# ShowPass:
+Request
+type:ShowPass
+
+Response
+type:AbonamentResponse
+dataIncepere:String - Format : yyyy-MM-dd HH:mm:ss
+dataExpirare:String - Format : yyyy-MM-dd HH:mm:ss
+pret:Double
+tip:String
+qr:byte[]
+____
+type:ErrorResponse
+message:
+
+# OrarRequest
+Request
+type:OrarRequest
+linie:string
+
+Response
+type:OrarResponse
+imagine:byte[]
