@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: Poppins, sans-serif;
+    background: #ffffff;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background: #c0392b;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.file-label i {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.file-label:active {
+    transform: scale(0.9);
+}
